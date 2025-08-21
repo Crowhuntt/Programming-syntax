@@ -1,4 +1,6 @@
 #if
+#elif
+#else
 
 if x < 0:
     x = 0
@@ -37,10 +39,15 @@ list(range(0, 10, 3))
 list = ['Mary', 'had', 'a', 'little', 'lamb']
 for i in range(len(list)):
     print(i, list[i])
+# 0 Mary
+# 1 had
+# 2 a
+# 3 little
+# 4 lamb
     
 #######################################################################################
-# break - The break statement breaks out of the innermost enclosing for or while loop
-# continue - The continue statement continues with the next iteration of the loop
+#break - The break statement breaks out of the innermost enclosing for or while loop
+#continue - The continue statement continues with the next iteration of the loop
 
 for num in range(2, 6):
     if num % 2 == 0:
@@ -52,5 +59,34 @@ for num in range(2, 6):
 # Found an odd number 3
 
 #######################################################################################
+#pass - The pass statement does nothing. It can be used when a statement is required syntactically but the program requires no action
 
+class EmptyClass:
+    pass
 
+#######################################################################################
+#match - A match statement takes an expression and compares its value to successive patterns given as one or more case blocks
+
+status = 404
+match status:
+    case 400:
+        return "Bad request"
+    case 404:
+        return "Not found"
+    case _:
+        return "No coincidences"
+# Not found
+
+point = (1,2) # tuple
+match point:
+    case (0, 0):
+        print("Origin")
+    case (0, y):
+        print(f"Y={y}")
+    case (x, 0):
+        print(f"X={x}")
+    case (x, y):
+        print(f"X={x}, Y={y}")
+    case _:
+        raise ValueError("Not a point")
+# X=1, Y=2
