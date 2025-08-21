@@ -25,6 +25,19 @@ for user, status in users:
         del users[user]
         
 #######################################################################################
+#break - The break statement breaks out of the innermost enclosing for or while loop
+#continue - The continue statement continues with the next iteration of the loop
+
+for num in range(2, 6):
+    if num % 2 == 0:
+        print(f"Found an even number {num}")
+        continue
+    print(f"Found an odd number {num}")
+    break
+# Found an even number 2
+# Found an odd number 3
+
+#######################################################################################
 #range - If you do need to iterate over a sequence of numbers
 
 for i in range(5):
@@ -44,19 +57,6 @@ for i in range(len(list)):
 # 2 a
 # 3 little
 # 4 lamb
-    
-#######################################################################################
-#break - The break statement breaks out of the innermost enclosing for or while loop
-#continue - The continue statement continues with the next iteration of the loop
-
-for num in range(2, 6):
-    if num % 2 == 0:
-        print(f"Found an even number {num}")
-        continue
-    print(f"Found an odd number {num}")
-    break
-# Found an even number 2
-# Found an odd number 3
 
 #######################################################################################
 #pass - The pass statement does nothing. It can be used when a statement is required syntactically but the program requires no action
