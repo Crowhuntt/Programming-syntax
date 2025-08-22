@@ -27,6 +27,7 @@ student(17, glasses=True)
 def combined_example(pos_only, /, standard, *, kwd_only):
     print(pos_only, standard, kwd_only)
 
+#######################################################################################
 #*arg y *args
 def fruits(best, *arguments, **keywords):
     print(f"Best fruit: {best}.")
