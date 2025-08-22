@@ -27,12 +27,33 @@ student(17, glasses=True)
 def combined_example(pos_only, /, standard, *, kwd_only):
     print(pos_only, standard, kwd_only)
 
+#*arg y *args
+def fruits(best, *arguments, **keywords):
+    print(f"Best fruit: {best}.")
+    print("Rest of fruits: ")
+    for arg in arguments:
+        print(arg)
+    print("Even more fruits: ")
+    for kw in keywords:
+        print(f"{kw}: {keywords[kw]}")
+        
+fruits("Strawberry", "Banana", "Apple", worst="Kiwi", worse="Orange")
+
+# Best fruit: Strawberry.
+# Rest of fruits: 
+# Banana
+# Apple
+# Even more fruits: 
+# worst: Kiwi
+# worse: Orange
+
 #######################################################################################
 #Lambda Expressions - Small anonymous functions can be created with the lambda keyword
 
 # This function returns the sum of its two arguments: lambda a, b: a+b
 def make_incrementor(n):
     return lambda x: x + n
+    
 f = make_incrementor(42)
 f(0)
 # 42
@@ -53,6 +74,7 @@ def my_function():
     No, really, it doesn't do anything.
     """
     pass
+    
 print(my_function.__doc__)
 # Do nothing, but document it.
 # No, really, it doesn't do anything.
