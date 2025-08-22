@@ -3,7 +3,9 @@
 
 # Required argument (age)
 # Optional argument (city). If not passed, default one will be set
-def student(age, city='Euskadi', glasses=False):
+# (glasses) Type hints: glasses argument is expected to be bool (just a hint, not requiered. wont return error if not bool)
+# -> return type. Function returns a string
+def student(age, city='Euskadi', glasses:bool=False) -> str:
     print(f"The student has {age} ages and lives in {city}. Wears glasses: {glasses}.")
 
 # Call the function by keywords
@@ -42,3 +44,15 @@ pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
 pairs.sort(key=lambda pair: pair[1])
 pairs
 # [(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]
+
+#######################################################################################
+#Documentation - Document a function
+
+def my_function():
+    """Do nothing, but document it.
+    No, really, it doesn't do anything.
+    """
+    pass
+print(my_function.__doc__)
+# Do nothing, but document it.
+# No, really, it doesn't do anything.
