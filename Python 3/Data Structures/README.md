@@ -1,4 +1,4 @@
-- Use **lists** when order matters and you need to modify elements
-- Use **tuples** when you need an immutable sequence (e.g., function return values)
-- Use **sets** when you need fast lookups and uniqueness
-- Use **dictionaries** when mapping keys to values efficiently.
+- [] Use **lists** when order matters and you need to modify elements
+- () Use **tuples** when you need an immutable sequence (e.g., function return values)
+- {} Use **sets** when you need fast lookups and uniqueness
+- {:} Use **dictionaries** when mapping keys to values efficiently.
