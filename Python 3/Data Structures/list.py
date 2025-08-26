@@ -36,3 +36,17 @@ fruits.clear() # Remove all items from the list
 fruits.copy() # Return a shallow copy of the list
 
 print(fruits[1:3]) # Prints a list slice
+
+#######################################################################################
+#list comprehensions - List comprehensions provide a concise way to create lists
+
+# Instead of:
+squares = []
+for x in range(10):
+    squares.append(x**2)
+squares
+# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# Do this: list comprehension
+squares = [x**2 for x in range(10)]
+# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
