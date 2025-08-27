@@ -11,7 +11,7 @@ fruits.count('apple') # Return the number of times x appears in the list
 fruits.index('banana') # Return zero-based index in the list of the first item whose value is equal to x
 # 3
 
-ruits.reverse() # Reverse the elements of the list in place
+fruits.reverse() # Reverse the elements of the list in place
 fruits
 # ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange']
 
