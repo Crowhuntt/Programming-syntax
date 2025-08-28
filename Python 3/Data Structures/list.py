@@ -1,6 +1,6 @@
 #list []
-# Ordered: Maintains the order of elements
 # Mutable: Elements can be modified after creation
+# Ordered: Maintains the order of elements
 # Allows Duplicates: Can have multiple occurrences of the same value
 # Heterogeneous: Can store different data types
 
