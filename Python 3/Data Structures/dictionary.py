@@ -1,6 +1,6 @@
 #dictionary {:}
-# Ordered: Maintains the order of elements
 # Mutable: Elements can be modified after creation
+# Ordered: Maintains the order of elements
 # Unique Elements: Duplicate values are automatically removed
 # Heterogeneous: Can store different data types
 
