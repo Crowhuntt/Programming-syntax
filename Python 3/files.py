@@ -26,4 +26,30 @@ f.write('This is a test\n') # writes the contents of string to the file, returni
 # 15
 
 #######################################################################################
+#json
+
+#dumps() - Convert object to JSON
+import json
+x = [1, 'simple', 'list']
+json.dumps(x) 
+# '[1, "simple", "list"]'
+
+#dump() - Serialize object to JSON and write into a file
+import json
+data = {
+    "emp1": {"name": "Lisa", "age": 34, "salary": 54000},
+    "emp2": {"name": "Elis", "age": 24, "salary": 40000},
+}
+with open("output.json", "w") as outfile:
+    json.dump(data, outfile, indent=4)
+
+#load() - Read a JSON file and convert to python object
+import json
+with open('data.json', 'r') as f: # data.json contains columns 'name' and 'age' for example
+  data = json.load(f)
+for name in data['name']: # iterate object
+    print(name)
+
+
+
 
