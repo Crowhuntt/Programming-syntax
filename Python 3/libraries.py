@@ -156,3 +156,108 @@ class TestStatisticalFunctions(unittest.TestCase):
             average(20, 30, 70)
 
 unittest.main()  # Calling from the command line invokes all tests
+
+#######################################################################################
+#pprint - adds line breaks and indentation to more clearly reveal data structure
+
+import pprint
+t = [[[['black', 'cyan'], 'white', ['green', 'red']], [['magenta',
+    'yellow'], 'blue']]]
+pprint.pprint(t, width=30)
+# [[[['black', 'cyan'],
+#   'white',
+#   ['green', 'red']],
+#  [['magenta', 'yellow'],
+#  'blue']]]
+
+#######################################################################################
+#textwrap - The textwrap module formats paragraphs of text to fit a given screen width
+
+import textwrap
+doc = """The wrap() method is just like fill() except that it returns a list of strings instead of one big string with newlines to separate the wrapped lines."""
+print(textwrap.fill(doc, width=40))
+# The wrap() method is just like fill()
+# except that it returns a list of strings
+# instead of one big string with newlines
+# to separate the wrapped lines.
+
+#######################################################################################
+#threading - Runs tasks in background while the main program continues to run
+
+import threading, zipfile
+class AsyncZip(threading.Thread):
+    def __init__(self, infile, outfile):
+        threading.Thread.__init__(self)
+        self.infile = infile
+        self.outfile = outfile
+    def run(self):
+        f = zipfile.ZipFile(self.outfile, 'w', zipfile.ZIP_DEFLATED)
+        f.write(self.infile)
+        f.close()
+        print('Finished background zip of:', self.infile)
+
+background = AsyncZip('mydata.txt', 'myarchive.zip')
+background.start()
+print('The main program continues to run in foreground.')
+background.join()    # Wait for the background task to finish
+print('Main program waited until background was done.')
+
+#######################################################################################
+#logging - Offers a full featured and flexible logging system
+
+import logging
+logging.debug('Debugging information')
+logging.info('Informational message')
+logging.warning('Warning:config file %s not found', 'server.conf')
+logging.error('Error occurred')
+logging.critical('Critical error -- shutting down')
+
+# WARNING:root:Warning:config file server.conf not found
+# ERROR:root:Error occurred
+# CRITICAL:root:Critical error -- shutting down
+
+#######################################################################################
+#array - Provides an array object that is like a list that stores only homogeneous data and stores it more compactly
+
+from array import array
+a = array('H', [4000, 10, 700, 22222])
+sum(a)
+#26932
+
+#######################################################################################
+#deque - Is like a list with faster appends and pops from the left side but slower lookups in the middle
+# These objects are well suited for implementing queues and breadth first tree searches
+
+from collections import deque
+d = deque(["task1", "task2", "task3"])
+d.append("task4")
+print("Handling", d.popleft())
+# Handling task1
+
+#######################################################################################
+#bisect - Functions for manipulating sorted lists
+
+import bisect
+scores = [(100, 'perl'), (200, 'tcl'), (400, 'lua'), (500, 'python')]
+bisect.insort(scores, (300, 'ruby')) # inserts the record in the corresponding index (ordered by 'scores')
+scores
+# [(100, 'perl'), (200, 'tcl'), (300, 'ruby'), (400, 'lua'), (500, 'python')]
+
+#######################################################################################
+#decimal - offers a Decimal datatype for decimal floating-point arithmetic
+
+from decimal import *
+round(Decimal('0.70') * Decimal('1.05'), 2) # exact decimal representation (decimal floating-point)
+# Decimal('0.74')
+round(.70 * 1.05, 2) # built-in float implementation (gives different result due to his binary floating-point)
+# 0.73
+
+Decimal('1.00') % Decimal('.10') # exact
+# Decimal('0.00')
+1.00 % 0.10 # wrong
+# 0.09999999999999995
+
+sum([Decimal('0.1')]*10) == Decimal('1.0')
+# True
+0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 == 1.0
+# False
