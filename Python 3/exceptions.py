@@ -70,4 +70,32 @@ for arg in sys.argv[1:]:
         print(arg, 'has', len(f.readlines()), 'lines')
         f.close()
 
+#######################################################################################
+#raise - The raise statement allows the programmer to force a specified exception to occur
+
+raise NameError('HiThere')
+# Traceback (most recent call last):
+#   File "<stdin>", line 1, in <module>
+#     raise NameError('HiThere')
+# NameError: HiThere
+
+#The sole argument to raise indicates the exception to be raised
+raise ValueError  # shorthand for 'raise ValueError()'
+
+# If you need to determine whether an exception was raised but don’t intend to handle it, a simpler form of the raise statement allows you to re-raise the exception
+try:
+    raise NameError('HiThere') # raise exception
+except NameError:   # exception martches so we enter
+    print('An exception flew by!') # handle exception, in this case just print a message
+    raise # re-raise exception. Now an error will stop the execution
+# An exception flew by!
+# Traceback (most recent call last):
+#  File "<stdin>", line 2, in <module>
+#     raise NameError('HiThere')
+# NameError: HiThere
+
+
+#8.6. User-defined Exceptions?
+https://docs.python.org/3/tutorial/errors.html
+
 
