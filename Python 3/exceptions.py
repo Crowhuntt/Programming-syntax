@@ -94,8 +94,56 @@ except NameError:   # exception martches so we enter
 #     raise NameError('HiThere')
 # NameError: HiThere
 
+#######################################################################################
+#finally - If a finally clause is present, the finally clause will execute as the last task before the try statement completes
+# The finally clause runs whether or not the try statement produces an exception
 
-#8.6. User-defined Exceptions?
+try:
+    raise KeyboardInterrupt
+finally:
+    print('Goodbye, world!')
+# Goodbye, world!
+# Traceback (most recent call last):
+#   File "<stdin>", line 2, in <module>
+#     raise KeyboardInterrupt
+# KeyboardInterrupt
+
+# Example of finally
+def bool_return():
+    try:
+        return True # If the try statement reaches a break, continue or return statement, the finally clause will execute just prior to the break, continue or return statement’s execution
+    finally:
+        return False # If the finally clause executes a break, continue or return statement, exceptions are not re-raised
+bool_return()
+# False
+
+# Another example of finally
+def divide(x, y):
+    try:
+        result = x / y
+    except ZeroDivisionError:
+        print("division by zero!")
+    else:
+        print("result is", result)
+    finally:
+        print("executing finally clause")
+
+divide(2, 1)
+# result is 2.0
+# executing finally clause
+divide(2, 0)
+# division by zero!
+# executing finally clause
+divide("2", "1")
+# executing finally clause
+# Traceback (most recent call last):
+#   File "<stdin>", line 1, in <module>
+#     divide("2", "1")
+#     ~~~~~~^^^^^^^^^^
+#   File "<stdin>", line 3, in divide
+#     result = x / y
+#              ~~^~~
+# TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+#8.8. Predefined Clean-up Actions
 https://docs.python.org/3/tutorial/errors.html
-
-
