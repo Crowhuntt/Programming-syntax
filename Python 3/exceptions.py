@@ -172,3 +172,7 @@ with open("myfile.txt") as f:
     for line in f:
         print(line, end="")
 
+#######################################################################################
+#notes - There are cases where it is useful to add information after the exception was caught
+
+https://docs.python.org/3/tutorial/errors.html#predefined-clean-up-actions
