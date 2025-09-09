@@ -145,5 +145,15 @@ divide("2", "1")
 #              ~~^~~
 # TypeError: unsupported operand type(s) for /: 'str' and 'str'
 
-#8.8. Predefined Clean-up Actions
-https://docs.python.org/3/tutorial/errors.html
+#######################################################################################
+#clean - Clean-up Actions
+# Some objects define standard clean-up actions to be undertaken when the object is no longer needed, regardless of whether or not the operation using the object succeeded or failed
+
+for line in open("myfile.txt"): # it leaves the file open for an indeterminate amount of time
+    print(line, end="")
+
+#with -  The with statement allows objects like files to be used in a way that ensures they are always cleaned up promptly and correctly
+with open("myfile.txt") as f:
+    for line in f:
+        print(line, end="")
+
