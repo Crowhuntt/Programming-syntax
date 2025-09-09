@@ -71,6 +71,21 @@ for arg in sys.argv[1:]:
         f.close()
 
 #######################################################################################
+#except* - Raising and Handling Multiple Unrelated Exceptions
+# There are situations where it is necessary to report several exceptions that have occurred
+# This is often the case in concurrency frameworks, when several tasks may have failed in parallel
+# The builtin 'ExceptionGroup' wraps a list of exception instances so that they can be raised together
+
+def f():
+    pass
+try:
+    f()
+except* OSError as e:
+    print("There were OSErrors")
+except* SystemError as e:
+    print("There were SystemErrors")
+
+#######################################################################################
 #raise - The raise statement allows the programmer to force a specified exception to occur
 
 raise NameError('HiThere')
