@@ -175,4 +175,15 @@ with open("myfile.txt") as f:
 #######################################################################################
 #notes - There are cases where it is useful to add information after the exception was caught
 
-https://docs.python.org/3/tutorial/errors.html#predefined-clean-up-actions
+try:
+    raise TypeError('bad type')
+except Exception as e:
+    e.add_note('Add some information')
+    e.add_note('Add some more information')
+    raise
+# Traceback (most recent call last):
+#   File "<stdin>", line 2, in <module>
+#     raise TypeError('bad type')
+# TypeError: bad type
+# Add some information
+# Add some more information
