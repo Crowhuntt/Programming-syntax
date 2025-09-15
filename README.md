@@ -1,2 +1,2 @@
 # Programming syntax (Handbook)
-Handbook for different programming languange syntax
+Handbook for different programming languange syntax.
