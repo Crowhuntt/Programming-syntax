@@ -67,6 +67,7 @@ numpy (1.9.2)
 pip (7.0.3)
 requests (2.7.0)
 setuptools (16.0)
+dotenv (1.1.1)
 ```
 
 ### Export package list
@@ -80,6 +81,7 @@ $ cat requirements.txt
 novas==3.1.1.3
 numpy==1.9.2
 requests==2.7.0
+dotenv==1.1.1
 ```
 
 The ```requirements.txt``` can then be committed to version control and shipped as part of an application. Users can then install all the necessary packages with ```install -r```:
@@ -93,9 +95,11 @@ Collecting numpy==1.9.2 (from -r requirements.txt (line 2))
   ...
 Collecting requests==2.7.0 (from -r requirements.txt (line 3))
   ...
-Installing collected packages: novas, numpy, requests
+Collecting dotenv==1.1.1 (from -r requirements.txt (line 4))
+  ...
+Installing collected packages: novas, numpy, requests, dotenv
   Running setup.py install for novas
-Successfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0
+Successfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0 dotenv-1.1.1
 ```
 
 ```pip``` has many more options. Consult the [Installing Python Modules](https://docs.python.org/3/installing/index.html#installing-index) guide for complete documentation for pip. When you’ve written a package and want to make it available on the Python Package Index, consult the [Python packaging user guide](https://packaging.python.org/en/latest/tutorials/packaging-projects/).
