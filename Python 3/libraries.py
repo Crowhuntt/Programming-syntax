@@ -261,3 +261,17 @@ sum([Decimal('0.1')]*10) == Decimal('1.0')
 # True
 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 == 1.0
 # False
+
+#######################################################################################
+#dotenv - Reads key-value pairs from a .env file and can set them as environment variables
+
+# .env file should look like this. This file hides all secret keys from the project 
+POLIGON_API_KEY = "73hs72jsl491d2mf03"
+
+# script file example loading .env file secret keys
+from dotenv import load_dotenv
+load_dotenv()
+test = os.getenv("POLIGON_API_KEY")
+print(test)
+# 73hs72jsl491d2mf03
+
