@@ -68,7 +68,7 @@ Golden Records: Master data management (MDM) is the practice of building consist
 
 **COW (Copy on write)**: File-based systems don’t actually support in-place file updates. All of these systems utilize copy on write (COW). If one record in a file is changed or deleted, the whole file must be rewritten with the new changes. This is part of the reason that early adopters of big data and data lakes rejected updates: managing files and updates seemed too complicated.
 
-### Ingestion
+## Ingestion
 
 **Data Pipelines**:  A data pipeline is the combination of architecture, systems, and processes that move data through the stages of the data engineering lifecycle. A data pipeline could be a traditional ETL system, where data is ingested from an on-premises transactional system, passed through a monolithic processor, and written into a data warehouse. Or it could be a cloud-based data pipeline that pulls data from 100 sources, combines it into 20 wide tables, trains five other ML models, deploys them into production, and monitors ongoing performance. A data pipeline should be flexible enough to fit any needs along the data engineering lifecycle.
 
