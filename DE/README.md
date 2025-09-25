@@ -181,7 +181,7 @@ Golden Records: Master data management (MDM) is the practice of building consist
 **Semantic and Metrics Layers**: Metrics layer tools help solve a central question in analytics that has plagued organizations since people have analyzed data: “Are these numbers correct?”. Allows users to define standard metrics and reference them in many downstream queries; this is meant to solve the traditional problem of repetition and inconsistency in traditional ETL scripts.
 
 
-## EXTRA:
+## Extra:
 
 **Data in the C-suite**
 - **CEO**:  Chief executive officers (CEOs) at nontech companies gener‐ ally don’t concern themselves with the nitty-gritty of data frameworks and software. Instead, they define a vision in collaboration with technical C-suite roles and com‐ pany data leadership. Data engineers provide a window into what’s possible with data.
@@ -195,6 +195,6 @@ Golden Records: Master data management (MDM) is the practice of building consist
 
 **Product manager**: Product managers oversee product (data products) development, often owning product lines. Data engineers interact more frequently with product managers as the corporate world has adopted a data-centric focus. Like project managers, product managers balance the activity of technology teams against the needs of the customer and business.
 
-## MORE EXTRA:
+## More Extra:
 
 **Security Theater**: We’re amazed at the number of companies with security policies in the hundreds of pages that nobody reads, the annual security policy review that people immediately forget, all in checking a box for a security audit. This is security theater, where security is done in the letter of compliance (SOC-2, ISO 27001, and related) without real commitment.
