@@ -1,5 +1,7 @@
 # Data Engineering Lifecycle and Terminology
 
+Summary of the book [Fundamentals of Data Engineering](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/) by [Crowhuntt](https://github.com/Crowhuntt).
+
 Master data: Master data is data about business entities such as employees, customers, products, and locations. As organizations grow larger and more complex through organic growth and acquisitions, and collaborate with other businesses, maintaining a consis‐ tent picture of entities and identities becomes more and more challenging.
 
 Golden Records: Master data management (MDM) is the practice of building consistent entity defi‐ nitions known as golden records. Golden records harmonize entity data across an organization and with its partners. For example, an MDM team might determine a standard format for addresses, and then work with data engineers to build an API to return consistent addresses and a system that uses address data to match customer records across company divisions.
